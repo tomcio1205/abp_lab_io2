@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>LABIO.Migrator</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>LABIO.Migrator</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json;log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.Castle.Log4Net" Version="7.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LABIO.Core\LABIO.Core.csproj" />
+    <ProjectReference Include="..\LABIO.EntityFrameworkCore\LABIO.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
